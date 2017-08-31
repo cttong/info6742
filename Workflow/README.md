@@ -30,7 +30,9 @@ You can do as many commits and pushes to your local branch as your need to. Gene
 5. Give the PR  an informative name and select one or more of the other team members as `Reviewers`.
 
 6. ***Assuming there are no conflicts***
-The reviewers can then check the files being added to see the commit and leave comments if they see any issues, for example if there is a bug, a typo, or some function could be written more efficiently. You can then ammend these problems.
+The reviewers can then check the files being added to see the commit and leave comments if they see any issues, for example if there is a bug, a typo, or some function could be written more efficiently. You can then amend these problems. As long as you are in the branch, new commits can be added and the PR will be updated.
+
+This both helps to ensure that the code being committed is good, by having a second pair of eyes on it, and will help us to keep track of the project better by forcing us to look at code we didn't write.
 
 When the reviewer is satisfied that the code is good to merge they can simply comment this on the thread. A standard phrase used is `LGTM` or Looks Good To Merge.
 
