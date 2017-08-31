@@ -6,6 +6,8 @@ Here are instructions for a good workflow when using Github collaboratively. The
 
 We can use forking and branching to work effectively on different sub-tasks without interrupting or over-writing each others work.
 
+***Note to Charles: Since you own the master repo you do not need to worry about any forking, so the first part of point 1, point 2, and point 8 do not apply, although it is probably worth reading them.***
+
 # Getting set up
 
 1. Fork the main Github repo so that you have your own personal version. The master version will always be Charles' version (so no need for you to do this Charles). Clone your fork locally and `cd` into the directory. You can confirm you are in the directory with the command `git status`.
