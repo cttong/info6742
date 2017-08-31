@@ -50,6 +50,6 @@ You can then merge the pull request.
 
 First, use `git checkout master` to switch back to the `master` of your local fork. Second, use `git fetch upstream` to point your local git at the upstream branches. Finally, use `git pull upstream master` to pull the most up-to-date master from Charles' repo into your local fork.
 
-### Now repeated steps 1-8 each time your start working on a new problem.
+### Now repeated steps 3-8 each time your start working on a new problem.
 
 Let me know if you have any questions.
