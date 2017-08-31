@@ -34,9 +34,11 @@ The reviewers can then check the files being added to see the commit and leave c
 
 When the reviewer is satisfied that the code is good to merge they can simply comment this on the thread. A standard phrase used is `LGTM` or Looks Good To Merge.
 
-You can then merge the pull request. ***Reviewers should not merge the pull request themselves, it should be down to the person making it***
+***Reviewers should not merge the pull request themselves, it should be down to the person making it***
 
-***If there are conflicts*** then they will need to be resolved. For example if your PR conflicts with existing code you will need to do a merge. This makes things a bit more complicated. If the workflow above is adhered to closely then this should be a rare occurrence.
+You can then merge the pull request.
+
+***If there are conflicts (you will see a message indicating this)*** then they will need to be resolved. For example if your PR conflicts with existing code you will need to do a merge. This makes things a bit more complicated. If the workflow above is adhered to closely then this should be a rare occurrence.
 
 7. When you merge the PR you will be asked if you want to delete your branch. You should do this.
 
