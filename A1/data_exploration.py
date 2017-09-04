@@ -34,8 +34,9 @@ if __name__ == '__main__':
         for c in post['comments']:
             try:
                 comment_list.append({
-                    'author' : c['author'],
-                    'time' : c['created'],
+                    'id': c['id'],
+                    'author': c['author'],
+                    'time': c['created'],
                     'text': c['body'],
                     'parent': c['parent_id'],
                     'score': c['score'],
