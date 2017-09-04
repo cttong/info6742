@@ -1,10 +1,13 @@
 # coding: utf-8
 
-get_ipython().system(' cd ../.. && mkdir CMV && cd CMV && curl -# -O https://chenhaot.com/data/cmv/cmv_20161111.jsonlist.gz && gunzip cmv_20161111.jsonlist.gz ')
-
+import os
 import glob
 import json
 import pickle
+
+print("Downloading and unzipping raw data files...")
+os.system(' cd ../.. && mkdir CMV && cd CMV && curl -# -O https://chenhaot.com/data/cmv/cmv_20161111.jsonlist.gz && gunzip cmv_20161111.jsonlist.gz ')
+
 
 def has_delta(comment_text):
     """ This function returns True if the comment text contains a delta.
@@ -41,6 +44,7 @@ def resolve_deltas(comments):
 if __name__ == '__main__':
     data = glob.glob('../../CMV/*')[0] # Get string for JSON file with data
 
+    print("Parsing posts and comments...")
     f = open(data, 'rb')
     posts_dict = {}
     comments_dict = {}
@@ -75,10 +79,12 @@ if __name__ == '__main__':
         comments_dict[post['id']]= comment_list
     f.close()
 
+    print("Storing parsed posts and comments...")
     # Store new version in pickle
     pickle.dump(posts_dict, open('post_info.p','wb'))
     pickle.dump(comments_dict, open('comment_info.p','wb'))
 
+    print("Resolving deltas...")
     # Now resolving deltas and storing an object containing them
     deltas_dict = {}
     post_ids = list(posts_dict.keys())
@@ -89,3 +95,4 @@ if __name__ == '__main__':
 
     # Store deltas object in pickle
     pickle.dump(deltas_dict, open('deltas_info.p','wb'))
+    print("Finished. All files created.")
