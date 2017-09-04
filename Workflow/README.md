@@ -6,7 +6,7 @@ Here are instructions for a good workflow when using Github collaboratively. The
 
 We can use forking and branching to work effectively on different sub-tasks without interrupting or over-writing each others work.
 
-***Note to Charles: Since you own the master repo you do not need to worry about any forking, so the first part of point 1, point 2, and point 8 do not apply, although it is probably worth reading them.***
+***Note to Charles: Since you own the master repo you do not need to worry about any forking, so the first sentence of point 1, point 2, and most of point 8 do not apply, although it is probably worth reading them.***
 
 # Getting set up
 
@@ -38,18 +38,18 @@ This both helps to ensure that the code being committed is good, by having a sec
 
 When the reviewer is satisfied that the code is good to merge they can simply comment this on the thread. A standard phrase used is `LGTM` or Looks Good To Merge.
 
-***Reviewers should not merge the pull request themselves, it should be down to the person making it***
+***Note: Reviewers should NOT merge the pull request themselves, it should be done by the person making it. Otherwise the reviewer will be credited with the commit and writing the code, not the person who made the PR.***
 
 You can then merge the pull request.
 
-***If there are conflicts (you will see a message indicating this)*** then they will need to be resolved. For example if your PR conflicts with existing code you will need to do a merge. This makes things a bit more complicated. If the workflow above is adhered to closely then this should be a rare occurrence.
+***If there are conflicts (you will see a message indicating this)*** then they will need to be resolved. For example if your PR conflicts with existing code you will need to [resolve the conflicts](https://help.github.com/articles/resolving-a-merge-conflict-on-github/) before merging. This makes things a bit more complicated. If the workflow above is adhered to closely then this should be a rare occurrence.
 
 7. When you merge the PR you will be asked if you want to delete your branch. You should do this.
 
 8. Now you are stuck in a deleted branch on your local fork. Even worse, your master branch is out of date as it doesn't have the new material you pushed. This is where the `upstream` thing you did earlier comes in. With a couple of simple commands you can easily get the latest version of the master branch into your fork.
 
-First, use `git checkout master` to switch back to the `master` of your local fork. Second, use `git fetch upstream` to point your local git at the upstream branches. Finally, use `git pull upstream master` to pull the most up-to-date master from Charles' repo into your local fork.
+First, use `git checkout master` to switch back to the `master` of your local fork (***Charles: All you will need to do is checkout the master branch.***). Second, use `git fetch upstream` to point your local git at the upstream branches. Finally, use `git pull upstream master` to pull the most up-to-date master from Charles' repo into your local fork.
 
-### Now repeated steps 3-8 each time your start working on a new problem.
+### Now repeat steps 3-8 each time your start working on a new problem.
 
-Let me know if you have any questions.
+Let me know if you have any questions or if there are any errors or omissions in this guide.
